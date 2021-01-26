@@ -14,7 +14,7 @@ class viewer:
 
   def __init__(self):
     self.bridge = CvBridge()
-    self.image_sub = rospy.Subscriber("/unibas_face_detector/faces", Image, self.callback)
+    self.image_sub = rospy.Subscriber("unibas_face_distance_calculator/faces", Image, self.callback)
 
   def callback(self,data):
     try:
@@ -22,7 +22,7 @@ class viewer:
     except CvBridgeError as e:
       print(e)    
 
-    cv2.imshow("faces", cv_image)
+    cv2.imshow("faces + depth", cv_image)
     cv2.waitKey(30)
    
 
