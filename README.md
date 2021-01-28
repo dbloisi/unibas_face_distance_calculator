@@ -1,11 +1,17 @@
 # unibas_face_distance_calculator
-A ROS package for calculating the 3D distance of a face from the sensor
+A ROS package for calculating 3D world coordinates from depth data. In particular, this code
+calculates the distance of faces from the RGB-D sensor
+
+Requirements
 
 - ROS (tested with noetic)
 - OpenCV (tested with version 4.3)
+- meta information for the sensor (ROS CameraInfo topic)
 
-## Examples
+## Example video
 [![YT_video](https://img.youtube.com/vi/WbfEt5JiNFc/0.jpg)](https://www.youtube.com/watch?v=WbfEt5JiNFc)
+
+## Example images
 ![example_1](images/example_1.png)
 ![example_2](images/example_2.png)
 
